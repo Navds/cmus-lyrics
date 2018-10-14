@@ -11,4 +11,20 @@ Fetch lyrics of currently playing music in cmus. All lyrics files are stored by 
 
 ## Installation
 
-Download the script and put it in your path, don't forget making it executable.
+Download the script and put it in your path, don't forget making it executable. I suggest the following:
+
+```bash
+cd /path/to/install
+git clone https://github.com/Navds/cmus-lyrics.git
+cd cmus-lyrics
+sudo chmod +x lyrics
+ln -s $(pwd)/lyrics -t ~/bin
+```
+
+## Use
+
+Just enter the command *lyrics* on the terminal and have fun.
+
+```bash
+lyrics
+```
