@@ -1,0 +1,21 @@
+#!/bin/bash
+# Get lyrics of currently playing music in cmus
+
+# Author: navds<job.navds@gmail.com>
+# Github: Navds/cmus-lyrics
+
+# Dependencies: cmus glyrc
+
+# Default directory to save lyrics
+LYRICS_DIR=$HOME/lyrics
+
+ARTIST=$(cmus-remote -Q | grep "tag artist " | sed "s/tag artist //g")
+TITLE=$(cmus-remote -Q | grep "tag title " | sed "s/tag title //g")
+LYRICS_FILE="$LYRICS_DIR/${ARTIST}__${TITLE}_lyrics_1.txt"
+
+if [ -f "${LYRICS_FILE}" ]; then
+    less "${LYRICS_FILE}"
+else
+    glyrc lyrics -a "$ARTIST" -t "$TITLE" -w $LYRICS_DIR
+    less "${LYRICS_FILE}"
+fi
