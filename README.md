@@ -8,6 +8,8 @@ Fetch lyrics of currently playing music in cmus. All lyrics files are stored by 
 
 * You need to have a functionnal **cmus** installation. Head to https://cmus.github.io/ for installation.
 * **glyrc**: https://github.com/sahib/glyr
+* **less**: get it from you distro's repo if not already installed.
+
 
 ## Installation
 
@@ -28,3 +30,5 @@ Just enter the command *lyrics* on the terminal and have fun.
 ```bash
 lyrics
 ```
+
+We use *less* for vim-like navigation (i: up, j: down, gg: top, G: bottom, q: quit)
