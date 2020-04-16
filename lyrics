@@ -8,6 +8,7 @@
 
 # Default directory to save lyrics
 LYRICS_DIR=$HOME/lyrics
+mkdir -p ${LYRICS_DIR}
 
 ARTIST=$(cmus-remote -Q | grep "tag artist " | sed "s/tag artist //g")
 TITLE=$(cmus-remote -Q | grep "tag title " | sed "s/tag title //g")
